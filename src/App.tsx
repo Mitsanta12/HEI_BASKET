@@ -22,10 +22,7 @@ function App() {
     <div className="w-full bg-white text-gray-950 font-poppins">
       <NavBar />
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/photos" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </div>
