@@ -1,4 +1,4 @@
-<img src="..."/>
+<img src="https://github.com/Mitsanta12/HEI_BASKET/blob/main/HEI_BASKET.png"/>
 
 # HEI BASKET Landing Page
 
@@ -28,7 +28,7 @@ This project is a landing page for HEI BASKETBALL built using React, TypeScript,
 1. Clone the repository:
 
    ```bash
-   git clone repository
+   git clone https://github.com/Mitsanta12/HEI_BASKET.git
    ```
 
 2. Navigate to the project directory:
