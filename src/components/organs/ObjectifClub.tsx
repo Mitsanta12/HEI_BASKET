@@ -61,7 +61,7 @@ const ClubObjectif = () => {
           {/* First Card  */}
           <Card
             cardClass="lg:w-[100%] md:w-[100%] w-[100%] shadow-2xl shadow-sky-500/70 p-4 rounded-xl flex flex-col gap-4"
-            imageAlt={ObjectifClub.cardOne.name}
+            imageAlt={ObjectifClub.cardOne.date}
             imageSrc={CardImage1}
             imageWrapperClass="h-[100%] w-[100%] overflow-hidden rounded-xl shadow"
             cover="object-cover object-top"
