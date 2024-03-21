@@ -32,6 +32,7 @@ const Galleries = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = Photos.cards.slice(indexOfFirstItem, indexOfLastItem);
 
+  // Fonction pour afficher les images des villes
   const renderCities = (elementIndex: number) => {
     const photoIndex = indexOfFirstItem + elementIndex;
     switch (photoIndex) {
@@ -64,8 +65,10 @@ const Galleries = () => {
     }
   };
 
+  // Calcul du nombre total de pages pour la pagination
   const totalPages = Math.ceil(Photos.cards.length / itemsPerPage);
 
+  // Fonction pour changer de page
   const changePage = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
@@ -74,6 +77,7 @@ const Galleries = () => {
 
   return (
     <>
+      {/* Section de la page */}
       <section className="w-full lg:h-screen md:h-[550px] h-[830px] relative overflow-x-hidden flex justify-end">
         <Image
           className="h-[60%] w-[80%] lg:h-[90vh] md:h-[50vh] lg:w-1/2 md:w-[55%]"
@@ -107,6 +111,7 @@ const Galleries = () => {
         </main>
       </section>
 
+      {/* Section de la galerie de photos */}
       <section className="w-full h-auto flex flex-col items-center justify-center relative lg:px-24 md:px-20 px-6 my-20">
         <Text
           as="h2"
@@ -115,15 +120,19 @@ const Galleries = () => {
           {Photos.firstText}
         </Text>
 
+        {/* Description de la galerie */}
         <Text
           as="p"
           className="font-light text-base text-center text-color3/80 tracking-widest mt-8"
         >
           {Photos.secondText}
         </Text>
+
+        {/* Grille des cartes de photos */}
         <div className="grid grid-cols-3 gap-4 mt-8">
           {currentItems.map((card, index) => (
             <div key={index} className="relative">
+              {/* Affichage en plein écran de la photo au clic */}
               {expandedPhoto === index && (
                 <div
                   className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center cursor-pointer"
@@ -137,6 +146,7 @@ const Galleries = () => {
                 </div>
               )}
 
+              {/* Carte de la photo */}
               <Card
                 cardClass="overflow-hidden shadow-md rounded-lg cursor-pointer group"
                 imageAlt={card.action}
@@ -144,8 +154,9 @@ const Galleries = () => {
                 imageWrapperClass="w-full h-[250px] overflow-hidden"
                 cover="group-hover:scale-125 transition date-500 ease"
                 textWrapperClass="flex flex-col gap-4 w-full px-5 py-5"
-                onClick={() => setExpandedPhoto(index)}
+                onClick={() => setExpandedPhoto(index)} // Gestion de l'expansion de la photo
               >
+                {/* Contenu de la carte */}
                 <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 px-3 py-2 flex justify-between items-center">
                   <Text
                     as="h4"
@@ -165,25 +176,26 @@ const Galleries = () => {
           ))}
         </div>
 
+        {/* Pagination */}
         <div className="flex justify-center mt-8">
-  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-    <Button
-      key={page}
-      onClick={() => changePage(page)}
-      className={`rounded-full px-3 py-1 mx-1 ${
-        currentPage === page
-          ? "bg-gray-800 text-white"
-          : "text-gray-800 hover:bg-gray-200"
-      }`}
-    >
-      {page}
-    </Button>
-  ))}
-</div>
-
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <Button
+              key={page}
+              onClick={() => changePage(page)}
+              className={`rounded-full px-3 py-1 mx-1 ${
+                currentPage === page
+                  ? "bg-gray-800 text-white"
+                  : "text-gray-800 hover:bg-gray-200"
+              }`}
+            >
+              {page}
+            </Button>
+          ))}
+        </div>
       </section>
     </>
   );
 };
 
 export default Galleries;
+
