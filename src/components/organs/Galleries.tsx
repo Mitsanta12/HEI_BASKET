@@ -9,8 +9,8 @@ import City3 from "../../assets/entraînement5.jpg";
 import City4 from "../../assets/soldat3.jpg";
 import City5 from "../../assets/entraînement6.jpg";
 import City6 from "../../assets/soldat5.jpg";
-import { Button } from "../atoms/Button";
-import { Calendar, CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { Calendar, CaretRight } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 const ClubPhoto = () => {
   const sliderRef = useRef<Slider | null>();
@@ -19,12 +19,6 @@ const ClubPhoto = () => {
   const next = () => {
     if (sliderRef.current) {
       sliderRef.current.slickNext();
-    }
-  };
-  // function for previous button
-  const previous = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
     }
   };
 
@@ -94,24 +88,6 @@ const ClubPhoto = () => {
         {Photos.firstText}
       </Text>
 
-      {/* Controllers  */}
-      <div className="mt-12 w-full flex justify-end gap-5 items-center md:px-6 px-3">
-        <Button
-          onClick={previous}
-          className="cursor-pointer outline-none border-none bg-color2/30 text-color3 hover:bg-color2 p-2 rounded-full"
-          type="button"
-        >
-          <CaretLeft size={18} color="currentColor" weight="fill" />
-        </Button>
-        <Button
-          onClick={next}
-          className="cursor-pointer outline-none border-none bg-color2/30 text-color3 hover:bg-color2 p-2 rounded-full"
-          type="button"
-        >
-          <CaretRight size={18} color="currentColor" weight="fill" />
-        </Button>
-      </div>
-
       {/* Slides  */}
       <div className="w-full h-auto mt-4">
         <Slider ref={(slider) => (sliderRef.current = slider)} {...settings}>
@@ -125,26 +101,31 @@ const ClubPhoto = () => {
                 cover="group-hover:scale-125 transition date-500 ease"
                 textWrapperClass="flex flex-col gap-4 w-full px-5 py-5"
               >
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between">
                   <Text as="h4" className="text-base font-medium text-color3">
                     {card.action}
                   </Text>
-                </div>
-                <div className="w-full flex gap-4 items-center text-color3">
-                  <Calendar size={32} color="currentColor" weight="fill" />
-                  <Text as="p" className=" text-color3 font-light text-base">
-                    {card.date}
-                  </Text>
+                  <div className="flex gap-2 items-center text-color3">
+                    <Calendar size={24} color="currentColor" />
+                    <Text as="p" className="font-light text-sm">
+                      {card.date}
+                    </Text>
+                  </div>
                 </div>
               </Card>
             </div>
           ))}
         </Slider>
+        <div className="flex justify-center mt-2">
+          <Link to="/photos" className="flex items-center  underline">
+            Voir plus <CaretRight size={24} />
+          </Link>
+        </div>
       </div>
 
       <Text
         as="p"
-        className="font-light text-base text-center text-color3/80 tracking-widest"
+        className="font-light text-base text-center text-color3/80 tracking-widest mt-8"
       >
         {Photos.secondText}
       </Text>
