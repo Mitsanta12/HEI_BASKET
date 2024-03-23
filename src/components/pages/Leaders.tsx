@@ -10,27 +10,9 @@ import { Devise } from "../particles/DataLists";
 import { Button } from "../atoms/Button";
 import { Fade, Slide } from "react-awesome-reveal";
 
-// Import des images des villes
-import City1 from "../../assets/entraînement.jpg";
-import City2 from "../../assets/soldat1.jpg";
-import City3 from "../../assets/entraînement5.jpg";
-import City4 from "../../assets/soldat3.jpg";
-import City5 from "../../assets/entraînement6.jpg";
-import City6 from "../../assets/soldat5.jpg";
-import City7 from "../../assets/team1.jpg";
-import City8 from "../../assets/team2.jpg";
-import City9 from "../../assets/team3.jpg";
-import City10 from "../../assets/team4.jpg";
-import City11 from "../../assets/Julio.jpg";
-import City12 from "../../assets/Coco.jpg";
+
 
 const Lead = () => {
-  const [expandedPhoto, setExpandedPhoto] = useState<number | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = Photos.cards.slice(indexOfFirstItem, indexOfLastItem);
 
  
   return (
