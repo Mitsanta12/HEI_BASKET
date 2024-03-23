@@ -1,13 +1,8 @@
-import { useState } from "react";
 import { Text } from "../atoms/Text";
-import { Photos } from "../particles/DataLists";
-import { Card } from "../molecules/Card";
-import { Calendar } from "@phosphor-icons/react";
 import { Image } from "../atoms/Image";
 import bgImage from "../../assets/HeroVector.png";
 import Dunk from "../../assets/Dunk1.png";
 import { Devise } from "../particles/DataLists";
-import { Button } from "../atoms/Button";
 import { Fade, Slide } from "react-awesome-reveal";
 
 
