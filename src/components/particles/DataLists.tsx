@@ -9,7 +9,7 @@ export const NavLinks = [
   },
   {
     name: "Leaders",
-    url: "/#",
+    url: "/leaders",
   },
   {
     name: "contact",
@@ -22,6 +22,7 @@ export const Devise = {
   secondText: "Plongez dans l'Excellence",
   thirdText:
     "Rejoignez le Club de Basket pour Élever Votre Jeu et Créer l'Histoire !",
+  fourthText: "Tous les leaders du clubs ..........",
   firstButton: "Rejoindre le Club",
 };
 
