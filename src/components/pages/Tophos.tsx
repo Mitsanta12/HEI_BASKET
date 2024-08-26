@@ -23,12 +23,12 @@ import City9 from "../../assets/team3.jpg";
 import City10 from "../../assets/team4.jpg";
 import City11 from "../../assets/Julio.jpg";
 import City12 from "../../assets/Coco.jpg";
-import City13 from "../../assets/entraînement1.jpg";
-import City14 from "../../assets/entraînement2.jpg";
-import City15 from "../../assets/entraînement3.jpg";
-import City16 from "../../assets/entraînement4.jpg";
+import City13 from "../../assets/La_team.jpg";
+import City14 from "../../assets/IFT_FOTO.jpg";
+import City15 from "../../assets/La_team2.jpg";
+import City16 from "../../assets/Supp.jpg";
 import City17 from "../../assets/entraînement8.jpg";
-import City18 from "../../assets/entraînement7.jpg";
+import City18 from "../../assets/Supp2.jpg";
 
 const Galleries = () => {
   const [expandedPhoto, setExpandedPhoto] = useState<number | null>(null);
