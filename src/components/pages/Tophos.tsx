@@ -23,6 +23,12 @@ import City9 from "../../assets/team3.jpg";
 import City10 from "../../assets/team4.jpg";
 import City11 from "../../assets/Julio.jpg";
 import City12 from "../../assets/Coco.jpg";
+import City13 from "../../assets/entraînement1.jpg";
+import City14 from "../../assets/entraînement2.jpg";
+import City15 from "../../assets/entraînement3.jpg";
+import City16 from "../../assets/entraînement4.jpg";
+import City17 from "../../assets/entraînement8.jpg";
+import City18 from "../../assets/entraînement7.jpg";
 
 const Galleries = () => {
   const [expandedPhoto, setExpandedPhoto] = useState<number | null>(null);
@@ -32,7 +38,7 @@ const Galleries = () => {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = Photos.cards.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Fonction pour afficher les images des villes
+  // Fonction pour afficher les images 
   const renderCities = (elementIndex: number) => {
     const photoIndex = indexOfFirstItem + elementIndex;
     switch (photoIndex) {
@@ -60,6 +66,18 @@ const Galleries = () => {
         return City11;
       case 11:
         return City12;
+      case 12:
+        return City13;
+      case 13:
+        return City14;
+      case 14:
+        return City15;
+      case 15:
+        return City16;
+      case 16:
+        return City17;
+      case 17:
+        return City18;
       default:
         return "";
     }
@@ -80,7 +98,7 @@ const Galleries = () => {
       {/* Section de la page */}
       <section className="w-full lg:h-screen md:h-[550px] h-[830px] relative overflow-x-hidden flex justify-end">
         <Image
-          className="h-[60%] w-[80%] lg:h-[90vh] md:h-[50vh] lg:w-1/2 md:w-[55%]"
+          className="h-[60%] w-[80%] lg:h-[90vh] md:h-[50vh] lg:w-1/2 md:w-[55%] object-cover"
           image={bgImage}
           alt="Hero Background Vector"
         />
@@ -104,7 +122,7 @@ const Galleries = () => {
               <Image
                 image={Dunk}
                 alt="Hero Image"
-                className=" lg:h-[85%] lg:w-[90%] md:h-[100%] md:w-full w-[90%] h-[50vh]"
+                className=" lg:h-[85%] lg:w-[90%] md:h-[100%] md:w-full w-[90%] h-[50vh] object-contain"
               />
             </Slide>
           </div>
@@ -129,9 +147,9 @@ const Galleries = () => {
         </Text>
 
         {/* Grille des cartes de photos */}
-        <div className="grid grid-cols-3 gap-4 mt-8">
+        <div className="flex flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
           {currentItems.map((card, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative flex-1 min-w-[250px]">
               {/* Affichage en plein écran de la photo au clic */}
               {expandedPhoto === index && (
                 <div
@@ -178,7 +196,7 @@ const Galleries = () => {
 
         {/* Pagination */}
         <div className="flex justify-center mt-8">
-        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
             <Button
               key={page}
               onClick={() => changePage(page)}
@@ -198,4 +216,3 @@ const Galleries = () => {
 };
 
 export default Galleries;
-

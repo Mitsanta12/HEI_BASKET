@@ -9,6 +9,7 @@ import NavBar from "./components/organs/NavBar"
 import Home from "./components/pages/Home";
 import Photos from "./components/pages/Tophos";
 import Leaders from "./components/pages/Leaders";
+import Contacts from "./components/pages/Contacts";
 import { useEffect } from "react";
 import Footer from "./components/organs/Footer";
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/leaders" element={<Leaders />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
       <Footer />
     </div>

@@ -43,6 +43,8 @@ const Lead = () => {
               />
             </Slide>
           </div>
+
+          
         </main>
       </section>
 

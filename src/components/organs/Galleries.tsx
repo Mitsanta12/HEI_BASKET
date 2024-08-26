@@ -35,7 +35,7 @@ const ClubPhoto = () => {
       </Text>
 
       {/* Photos */}
-      <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 w-full">
         {limitedCards.map((card, index) => (
           <div key={index} className="md:px-6 px-3">
             <Card
@@ -43,7 +43,7 @@ const ClubPhoto = () => {
               imageAlt={card.action}
               imageSrc={renderCities(index)}
               imageWrapperClass="w-full h-[250px] overflow-hidden"
-              cover="group-hover:scale-125 transition date-500 ease"
+              cover="group-hover:scale-125 transition duration-500 ease"
               textWrapperClass="flex flex-col gap-4 w-full px-5 py-5"
             >
               <div className="flex justify-between">
@@ -70,7 +70,7 @@ const ClubPhoto = () => {
       </Text>
 
       <div className="flex justify-center mt-2">
-        <Link to="/photos" className="flex items-center  underline">
+        <Link to="/photos" className="flex items-center underline">
           Voir plus <CaretRight size={24} />
         </Link>
       </div>

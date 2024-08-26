@@ -6,12 +6,11 @@ import { Devise } from "../particles/DataLists";
 import { Button } from "../atoms/Button";
 import { Fade, Slide } from "react-awesome-reveal";
 
-//https://www.pngegg.com/fr
 const HeroSection = () => {
   return (
     <section className="w-full lg:h-screen md:h-[550px] h-[830px] relative overflow-x-hidden flex justify-end">
       <Image
-        className="h-[60%] w-[80%] lg:h-[90vh] md:h-[50vh] lg:w-1/2 md:w-[55%]"
+        className="h-[60%] w-[80%] lg:h-[90vh] md:h-[50vh] lg:w-1/2 md:w-[55%] object-cover"
         image={bgImage}
         alt="Hero Background Vector"
       />
@@ -19,7 +18,7 @@ const HeroSection = () => {
         <div className="flex flex-col justify-center md:gap-6 gap-3 md:order-1 order-2">
           <Text
             as="h1"
-            className=" text-color3 lg:text-7xl md:text-5xl text-3xl font-medium"
+            className="text-color3 lg:text-7xl md:text-5xl text-3xl font-medium"
           >
             <Fade>{Devise.secondText}</Fade>
           </Text>
@@ -43,7 +42,7 @@ const HeroSection = () => {
             <Image
               image={Dunk}
               alt="Hero Image"
-              className=" lg:h-[85%] lg:w-[90%] md:h-[100%] md:w-full w-[90%] h-[50vh]"
+              className="lg:h-[85%] lg:w-[90%] md:h-[100%] md:w-full w-[90%] h-[50vh] object-contain"
             />
           </Slide>
         </div>

@@ -19,6 +19,7 @@ const ClubLead = () => {
       sliderRef.current.slickNext();
     }
   };
+
   // function for previous button
   const previous = () => {
     if (sliderRef.current) {
@@ -58,7 +59,7 @@ const ClubLead = () => {
         <div className="w-full flex flex-col gap-6">
           <Text
             as="p"
-            className="lg:text-5xl md:text-3xl text-4xl text-color3 font-medium"
+            className="lg:text-5xl md:text-3xl text-2xl text-color3 font-medium"
           >
             {ClubLeader.firstText}
           </Text>
@@ -69,17 +70,17 @@ const ClubLead = () => {
             {ClubLeader.secondText}
           </Text>
         </div>
+        
         {/* Testimonial Slides Container  */}
         <div className="w-full lg:h-[400px] flex justify-center gap-4 items-center">
-          <div className="lg:h-[250px] w-[90%]">
+          <div className="lg:h-[250px] w-full md:w-[90%]">
             <Slider
               ref={(slider) => (sliderRef.current = slider)}
               {...settings}
             >
               {ClubLeader.feedBacks.map((feedBack, index) => (
-                <div className="w-full">
+                <div className="w-full" key={index}>
                   <Card
-                    key={index}
                     cardClass="bg-white shadow border-[1px] border-color3/10 relative rounded-xl p-4 lg:h-[200px] h-[260px] lg:mb-4 w-full flex gap-4 justify-start"
                     imageAlt={feedBack.person}
                     imageSrc={renderProfileImg(index)}
@@ -109,7 +110,7 @@ const ClubLead = () => {
               ))}
             </Slider>
           </div>
-          {/* Controllers  */}
+          {/* Controllers */}
           <div className="flex flex-col gap-4 pb-5">
             <Button
               onClick={previous}

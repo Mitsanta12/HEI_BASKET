@@ -12,8 +12,8 @@ export const NavLinks = [
     url: "/leaders",
   },
   {
-    name: "contact",
-    url: "/#",
+    name: "Contacts",
+    url: "/contacts",
   },
 ];
 
@@ -23,6 +23,7 @@ export const Devise = {
   thirdText:
     "Rejoignez le Club de Basket pour Élever Votre Jeu et Créer l'Histoire !",
   fourthText: "Tous les leaders du clubs ..........",
+  fiveText: "Contacte-nous .......",
   firstButton: "Rejoindre le Club",
 };
 
@@ -97,6 +98,30 @@ export const Photos = {
     },
     {
       action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2023",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "ISPM",
       date: "../../2024",
     },
     {
