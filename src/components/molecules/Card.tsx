@@ -7,6 +7,7 @@ type CardProps = {
     imageSrc: string
     textWrapperClass?: string
     cover?: string
+    onClick?: () => void; // Définir onClick en optionnel
     children?: React.ReactNode
 }
 

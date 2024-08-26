@@ -5,22 +5,25 @@ export const NavLinks = [
   },
   {
     name: "Gallerie",
-    url: "/photos",
+    url: "/Photos",
   },
   {
     name: "Leaders",
     url: "/leaders",
   },
   {
-    name: "contact",
-    url: "/contact",
+    name: "Contacts",
+    url: "/contacts",
   },
 ];
 
 export const Devise = {
+  firstText: "Découvrez la galerie photos de l'équipe lors des entrainements et du smatchinx",
   secondText: "Plongez dans l'Excellence",
   thirdText:
     "Rejoignez le Club de Basket pour Élever Votre Jeu et Créer l'Histoire !",
+  fourthText: "Tous les leaders du clubs ..........",
+  fiveText: "Contacte-nous .......",
   firstButton: "Rejoindre le Club",
 };
 
@@ -80,6 +83,54 @@ export const Photos = {
     {
       action: "Photo de l'équipe , 67Ha",
       date: "31/10/2023",
+    },
+    {
+      action: "Echauffement d'avant match contre l'ACCEM",
+      date: "../../2024",
+    },
+    {
+      action: "Macth contre l'ACCEM",
+      date: "../../2024",
+    },
+    {
+      action: "Photo lors de la rencontre contre l'ISPM",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2023",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "ISPM",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
+    },
+    {
+      action: "...",
+      date: "../../2024",
     },
   ],
 };

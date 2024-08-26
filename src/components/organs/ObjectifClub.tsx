@@ -60,7 +60,7 @@ const ClubObjectif = () => {
         <div className="w-full flex flex-col justify-center lg:items-center items-start relative order-1 md:order-2">
           {/* First Card  */}
           <Card
-            cardClass="lg:w-[100%] md:w-[100%] w-[100%] shadow-2xl shadow-sky-500/70 p-4 rounded-xl flex flex-col gap-4"
+            cardClass="lg:w-[100%] md:w-[100%] w-[100%] shadow-xl shadow-sky-150 p-4 rounded-xl flex flex-col gap-4"
             imageAlt={ObjectifClub.cardOne.date}
             imageSrc={CardImage1}
             imageWrapperClass="h-[100%] w-[100%] overflow-hidden rounded-xl shadow"
